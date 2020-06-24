@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HNG Chatroom</title>
+    <!--Styling-->
+    <link href="style.css" rel="stylesheet">
+    <!--Font awesome-->
+    <script src="https://use.fontawesome.com/5b1ba0a395.js"></script>
+</head>
+<body >
+    <section class="chat-room">
+        <section class="chat-menu">
+            <div class="chat-menu--heading"><i class="fa fa-bars" aria-hidden="true"></i> HNG Internship</div>
+            <div class="chat-menu--sidebar">
+                <div class="search">
+                    <i class="fa fa-search search-icon" aria-hidden="true"></i> 
+                    <input type="search" placeholder="Search">
+                </div>
+                <div class="contact">
+                    <img class="contact-logo" src="hng_logo.png">
+                    <span class="contact-name">HNG Chatbot</span>
+                </div>
+            </div>
+        </section>
+        <section class="chat-body">
+            <div class="chat-body--heading">
+                <div>
+                    HNG Chatbot <span class="contact-status">online</span>
+                </div>
+            </div>
+            <div class="chat-body--messages">
+                <div class="chat-body--messages-container">
+                    <div class="chat-body--message chat-body--message-receiver">
+                        Hello, I am the HNG Chatbot. Please reply my questions that end with (Y/N)
+                        with a Yes or No. 
+                        What's your name?
+                    </div>
+                    <div id="bottom-DOM-anchor"></div>
+                </div>
+                    <div class="chat-body--message-input">
+                        <input type="text" placeholder="Enter Message" autofocus>
+                    <a href="#" class="plane-send">
+                        <div >
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

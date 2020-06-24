@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #F2F2F2;
+    --chat-heading-height: 40px;
+    --chat-heading--margin-bottom: 10px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.welcome{
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome--logo{
+    max-width: 10rem;
+    border-radius: 10px;
+}
+
+.welcome--header{
+    color: #084482;
+    margin-bottom: 10px;
+}
+
+.welcome--message{
+    margin-bottom: 30px;
+}
+
+.welcome--message--bot{
+    color: #084482;
+}
+
+.welcome--chat-button{
+    background-color: #00AEFF;
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: all 1s ease-in;
+}
+
+.welcome--chat-button:hover{
+    background-color: #0056b3;
+}
+
+.developer-detail{
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.developer-detail .fa-heart{
+    color: red;
+}
+
+/*Chat Room*/
+.chat-room{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 100%;
+    margin: 0 10%;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.chat-menu--heading{
+    color: white;
+    background-color:  #00AEFF;
+    height: var(--chat-heading-height);
+    padding: 10px 15px;
+}
+
+.chat-menu--sidebar .search{
+    background-color: #F2F2F2;
+    padding: 10px;
+    border-radius: 3px;
+    width: 100%;
+
+}
+
+.chat-menu--sidebar{
+    padding: 10px 11px;
+}
+
+.chat-menu--sidebar .search-icon{
+    color: #999;
+}
+
+.chat-menu--sidebar .search input{
+    width: 80%;
+    border: none;
+    background-color: #F2F2F2;
+    outline: none;
+} 
+
+.chat-menu--sidebar .contact{
+    margin: 10px 0;
+    position: relative;
+}
+
+.chat-menu--sidebar .contact-logo{
+    width: 50px;
+    border-radius: 50px;
+}
+
+.chat-menu--sidebar 
+.contact-name{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+}
+
+.chat-body{
+    position: relative;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.chat-body--heading{
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    background-color:  #00AEFF;
+    height: var(--chat-heading-height);
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.chat-body--heading 
+.contact-status{
+    font-weight: 100;
+}
+
+.chat-body--messages{
+    position: relative;
+    z-index: 1;
+    border-left: 3px solid #F2F2F2;
+    height: 100%;
+}
+
+.chat-body--messages::before{
+    z-index: -1;
+    content: "";
+    background-image: url(hng_logo.png);
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.chat-body--messages-container{
+    height: 75%;
+}
+
+.chat-body--message{
+    color: white;
+    margin: 10px 20px 2px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.chat-body--message-receiver{
+    background-color: #084482;
+    color: #F2F2F2;;
+    float: left;
+    clear: both;
+}
+
+.chat-body--message-sender{
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    float: right;
+    clear: both;
+}
+
+.chat-body--message-input{
+    position: absolute;
+    bottom: 10px;
+    left: 2%;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-body--message-input input{
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    height: 30px;
+    padding: 0 5px;
+    box-shadow: none;
+    outline: none;
+    text-transform: lowercase;
+}
+
+.chat-body--message-input .plane-send{
+    margin-left: 10px;
+    color: white;
+    display: flex;
+    background-color: #00AEFF;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration-style: none;
+}
+
+
+
+/*media query for Chatroom*/
+@media only screen and (max-width: 700px){
+    .chat-room{
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .chat-menu{
+        display: none;
+    }
+
+    .chat-body{
+        padding-bottom: 40px;
+    }
+    .chat-body--message-input{
+        position: fixed;
+    }
+}
