@@ -40,7 +40,7 @@ function sendMessage(e){
 
     messageContainer.innerHTML += `
         <div class="chat-body--message chat-body--message-sender">
-        ${messageInput.value}
+        ${messageInput.value.trim()}
         </div>`;
     replySender();
     
@@ -68,7 +68,7 @@ function replySender(){
         message =`<div class="chat-body--message chat-body--message-receiver">
                     ${message}
                 </div>` 
-        chatState.question = messages[chatState.question][messageInput.value.toLowerCase()+"Next"];
+        chatState.question = messages[chatState.question][messageInput.value.trim().toLowerCase()+"Next"];
         if(chatState.question === undefined) {
             messageInput.setAttribute("disabled", "");
         }
